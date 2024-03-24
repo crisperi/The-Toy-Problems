@@ -5,7 +5,7 @@ const form = document.getElementById('myForm');
 const gradeResult = document.getElementById('gradeResults')
 
 
-form.addEventListener('click', function (event) {
+form.addEventListener('submit', function (event) {
     //prevent the browser from default
     event.preventDefault();
     // get grade value input 
@@ -62,7 +62,7 @@ function speedCalculator(speed) {
 }
 
 
-speedForm.addEventListener('click', function(e){
+speedForm.addEventListener('submit', function(e){
     //prevent default behavior
     e.preventDefault();
     const speed = document.getElementById('speed').value;
