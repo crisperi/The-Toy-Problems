@@ -80,7 +80,6 @@ const basicSalary = document.getElementById("basicSalary").value;
 const benefits = document.getElementById("benefits").value;
 const netSalaryCalculatorForm = document.getElementById("netSalaryCalculatorForm");
 const calcDisplay = document.getElementById("calcDisplay");
-//const monthlyTaxablePay = basicSalary - benefits;
 
 
 
@@ -96,9 +95,13 @@ netSalaryCalculatorForm.addEventListener('submit', function (e) {
 
     // Get the payee and display it
     const finalDisplay = getPayee(monthlyTaxablePay);
-    const nssfTotal = getNhif(monthlyTaxablePay);
+    const nhiffTotal = getNhif(monthlyTaxablePay);
+    const nssfTotal = getNssf(monthlyTaxablePay);
 
-    calcDisplay.textContent = `Payee is ${finalDisplay} NSSF deduction ${nssfTotal} NSSF IS `;
+    const grossSalary = basicSalary + benefits;
+    const netSalary = grossSalary - nssfTotal - nhiffTotal - finalDisplay ;
+
+    calcDisplay.textContent = `Payee is ${finalDisplay} NhiF deduction ${nhiffTotal} NSSF IS ${nssfTotal} Gross Salary ${grossSalary} Net Salary is ${netSalary}`;
 
 
 });
@@ -148,8 +151,9 @@ function getNhif(monthlyTaxablePay) {
 
 }
 //calculate Nssf
-function getNssf(monthlyTaxablePay){
-
+function getNssf(monthlyTaxablePay) {
+    const calcNssf = monthlyTaxablePay * (6 / 100);
+    return calcNssf;
 }
 
 
