@@ -8,7 +8,7 @@ const gradeResult = document.getElementById('gradeResults')
 form.addEventListener('click', function (event) {
     //prevent the browser from default
     event.preventDefault();
-
+// get grade value input 
     const grade = document.getElementById('grade').value;
 
     //a function to calculate the grade scores 
@@ -37,5 +37,12 @@ form.addEventListener('click', function (event) {
     gradeResult.textContent = `GRADE : ${calculatedGrade} `;
 
 })
+
+
+
+// SPEED DETECTOR  CHALLENGE 2 
+// get the speedDisplay div in html
+const speedDisplay = document.getElementById('speedDisplay');
+
 
 
