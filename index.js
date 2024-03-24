@@ -3,12 +3,13 @@
 
 const form =document.getElementById('myForm');
 
-form.addEventListener('submit',function(event){
+form.addEventListener('click',function(event){
+    //prevent the browser from default
     event.preventDefault();
 
-    const grade = document.getElementById('grade');
+    const grade = document.getElementById('grade').value;
 
-    console.log(grade);
+    console.log('g value ', grade);
 })
 
 
