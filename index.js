@@ -13,7 +13,7 @@ form.addEventListener('click', function (event) {
 
     //a function to calculate the grade scores 
     function gradeEvaluator(grade) {
-        if (grade > 79) {
+        if (grade > 79 && grade <= 100 ) {
             return 'A';
 
         } else if (grade >= 60 && grade <= 79) {
@@ -37,4 +37,5 @@ form.addEventListener('click', function (event) {
     gradeResult.textContent = `GRADE : ${calculatedGrade} `;
 
 })
+
 
