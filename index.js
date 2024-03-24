@@ -2,7 +2,7 @@
 // will need input value for grade in html -- problem to solve 
 
 const form = document.getElementById('myForm');
-const gradeResult = document.getElementById('gradeResult')
+const gradeResult = document.getElementById('gradeResults')
 
 
 form.addEventListener('click', function (event) {
@@ -33,8 +33,8 @@ form.addEventListener('click', function (event) {
     //we need to show the results 
     const calculatedGrade = gradeEvaluator(grade);
 
-//show text content to the div id gradeResult 
-gradeResult.textContent = `GRADE : ${calculatedGrade} `;
+    //show text content to the div id gradeResult 
+    gradeResult.textContent = `GRADE : ${calculatedGrade} `;
 
 })
 
