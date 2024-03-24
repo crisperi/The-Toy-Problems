@@ -43,9 +43,11 @@ form.addEventListener('click', function (event) {
 // SPEED DETECTOR  CHALLENGE 2 
 // get the speedDisplay div in html
 const speedDisplay = document.getElementById('speedDisplay');
+const speedForm = document.getElementById('speedForm');
 
 
 function speedCalculator(speed) {
+
     if (speed <= 70) {
         return "Ok";
     } else if (speed > 70) {
@@ -60,3 +62,11 @@ function speedCalculator(speed) {
 }
 
 
+speedForm.addEventListener('click', function(e){
+    //prevent default behavior
+    e.preventDefault();
+    const speed = document.getElementById('speed').value;
+    const speedDetector = speedCalculator(speed);
+    speedDisplay.textContent = `${speedDetector}`;
+
+})
