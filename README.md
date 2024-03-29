@@ -6,7 +6,7 @@ Short description of what the project does.
     -   Challenge 1 is a Student Grade Generator 
     -   Challenge 2 is a speed detector 
     -   Challenge 3 was a Net salary calculator
-    ![Image Description](good2.PNG)
+    ![Image Description](good2.png)
 ## Table of Contents
 
 - [Installation](#installation)
