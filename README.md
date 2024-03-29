@@ -8,7 +8,7 @@ Short description of what the project does.
     -   Challenge 3 was a Net salary calculator
 
 
-![Image Description](good2.png)
+![Image Description](./good2.PNG)
 ## Table of Contents
 
 - [Installation](#installation)
